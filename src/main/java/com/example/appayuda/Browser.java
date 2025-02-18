@@ -32,13 +32,20 @@ public class Browser extends Region {
             "blog.png",
             "documentation.png",
             "partners.png ",
+            "facebook.jpg",
+            "moodle.jpg",
+            "twitter.jpg",
             "help.png"
+
     };
     private static String[] captions = new String[]{
             "Products",
             "Blogs",
             "Documentation",
             "Partners ",
+            "Facebook",
+            "Moodle",
+            "Twitter",
             "Help"
     };
     private static String[] urls = new String[]{
@@ -46,6 +53,9 @@ public class Browser extends Region {
             "http://blogs.oracle.com/",
             "http://docs.oracle.com/javase/index.html",
             "http://www.oracle.com/partners/index.html ",
+            "https://www.facebook.com/?locale=es_ES",
+            "https://moodle.org/?lang=es",
+            "https://x.com/?lang=es",
             WebViewSample.class.getResource("help.html").toExternalForm()
     };
     final ImageView selectedImage = new ImageView();
@@ -78,11 +88,8 @@ public class Browser extends Region {
                 }
             });
         }
-        // load the web page
-        webEngine.load("http://www.oracle.com/products/index.html");
         // create the toolbar
         toolBar = new HBox();
-        toolBar.setAlignment(Pos.CENTER);
         toolBar.getStyleClass().add("browser-toolbar");
         toolBar.getChildren().addAll(hpls);
         toolBar.getChildren().add(createSpacer());
@@ -124,7 +131,7 @@ public class Browser extends Region {
                 }
         );
         // load the web page
-        webEngine.load("http://www.oracle.com/products/index.html ");
+        webEngine.load("https://www.ieslosmontecillos.es");
         //add components
         getChildren().add(toolBar);
         getChildren().add(browser);
@@ -145,11 +152,11 @@ public class Browser extends Region {
     }
     @Override
     protected double computePrefWidth(double height) {
-        return 750;
+        return 200;
     }
     @Override
     protected double computePrefHeight(double width) {
-        return 500;
+        return 300;
     }
 
 }

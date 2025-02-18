@@ -2,8 +2,8 @@ package com.example.appayuda;
 
 import javafx.application.Platform;
 
-class JavaApp {
-    public void main() {
+public class JavaApp {
+    public void exit(){
         Platform.exit();
     }
 }
